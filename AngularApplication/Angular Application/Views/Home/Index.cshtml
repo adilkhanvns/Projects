@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<a href="/Home/TwoWaybinding">Two Way Binding and ngrepeat example</a>
+<a href="/Home/Eveandling">Event Handling</a>
+<a href ="/Home/Filters">Filters and ngDirective</a>
+<br />
+<a href ="/Home/Sorting">Sorting using filters</a>
+<a href ="/Home/NgHdeandShow">ng-hide and ng-show directive</a>
+<br /><br />
+@Html.ActionLink("call Git Services", "Service", "Service",null,null)
+
+<html ng-app="myModule"> 
+<h2>Index</h2>
+<head>
+ <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/jquery-1.8.2.min.js">
+</script>
+    <script src="~/Scripts/script.js"></script>
+   <script src="~/Scripts/controller.js"></script>
+
+    <script>
+        var work = function () {
+            console.log("work hard");
+        }
+        work();
+    
+    </script>
+ </head>
+<body >
+    <h1>
+        hello plunker !
+        {{843/42}}@*binding expression*@ 
+     </h1>
+    <div ng-controller="Maincontroller">
+       <h1> {{message}}</h1>
+    </div>
+    <div ng-controller="Testcontroller">
+        <div><h1>firstname:{{person.firstname}}</h1></div>
+        <div><h1>lastname:{{person.lastname}}</h1></div>
+        <div><h1>Image:<img ng-src="{{person.imagesrc}}"  title="{{person.firstname}} {{person.lastname}}" alt="{{person.firstname}} {{person.lastname}}"/></h1></div>
+    </div>
+</body>
+ 
+</html>

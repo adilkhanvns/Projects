@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<html> 
+<h2>Index</h2>
+<head>
+ <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/jquery-1.8.2.min.js">
+</script>
+    <script src="~/Scripts/Service.js"></script>
+ </head>
+<body  ng-app="Mymodule">
+    <div ng-controller="Mycontroller">
+        <h1>{{message}}</h1>
+        <div>
+            <h1>{{error}}</h1>
+        </div>
+            <div>
+                Name:{{users.name}}
+            </div>
+        <div>
+            Location:{{users.location}}
+        </div>
+        <div>
+            <img ng-src="{{users.avatar_url}}" title="{{users.name}}"
+        </div>
+    </div>
+</body>
+ 
+

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Filters";
+}
+
+<h2>Filters</h2>
+<html>
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/Filters.js"></script>
+        <link href="~/Content/Styles.css" rel="stylesheet" />
+        </head>
+    <body ng-app="mymodel">
+        <div ng-controller="mycontroller">
+          Row To Display:  <input type="number" step="1" min="0" max="5" ng-model="rowlimit" />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>DateOfBirth</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | limitTo :rowlimit ">
+                        <td>{{employee.name | uppercase}}</td>
+                        <td>{{employee.dateofbirth | date:"dd/mm/yyyy"}}</td>
+                        <td>{{employee.gender | lowercase}}</td>
+                        <td>{{employee.salary | number :2}}</td>
+                        <td>{{employee.salary | currency }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>

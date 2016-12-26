@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Sorting";
+}
+
+<h2>Sorting</h2>
+<html>
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/Filters.js"></script>
+        <link href="~/Content/Styles.css" rel="stylesheet" />
+        </head>
+    <body ng-app="mymodel">
+        <div ng-controller="Employees">
+          Order By: <select ng-model="sortcolumn">
+              <option value="name">Name ASC</option>
+              <option value="dateofbirth">Date OF Birth</option>
+              <option value="gender">Gender</option>
+              <option value="salary">Salary</option>
+                    </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>DateOfBirth</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | orderBy :sortcolumn:false ">
+                        <td>{{employee.name | uppercase}}</td>
+                        <td>{{employee.dateofbirth | date:"dd/mm/yyyy"}}</td>
+                        <td>{{employee.gender | lowercase}}</td>
+                        <td>{{employee.salary | number :2}}</td>
+                        <td>{{employee.salary | currency }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+        <div ng-controller="Employees">
+            <table>
+                <thead>
+                    <tr>
+                        <th ng-click="sortdate('name')">Name</th>
+                        <th ng-click="sortdate('dateofbirth')">DateOfBirth</th>
+                        <th ng-click="sortdate('gender')">Gender</th>
+                        <th ng-click="sortdate('salary')">Salary</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | orderBy :sortcolumn:reversesort ">
+                        <td>{{employee.name | uppercase}}</td>
+                        <td>{{employee.dateofbirth | date:"dd/mm/yyyy"}}</td>
+                        <td>{{employee.gender | lowercase}}</td>
+                        <td>{{employee.salary | number :2}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br /><br<<br />
+        <div ng-controller="SortEmployee">
+            Search: <input type="text" placeholder="Serch Employee" ng-model="searchtext.city" />
+            <table>
+                <thead>
+                    <tr>
+                        <th >Name</th>
+                        <th >Gender</th>
+                        <th >Salary</th>
+                        <th >city</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | filter: searchtext">
+                        <td>{{employee.name }}</td>
+                        <td>{{employee.gender}}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.city}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br /><br />
+          <div ng-controller="SortEmployee">
+            Search: <input type="text" placeholder="Serch Name & City" ng-model="searchtext" />
+            <table>
+                <thead>
+                    <tr>
+                        <th >Name</th>
+                        <th >Gender</th>
+                        <th >Salary</th>
+                        <th >city</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | filter :search">
+                        <td>{{employee.name }}</td>
+                        <td>{{employee.gender  }}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.city}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          <br /><br />
+          <div ng-controller="CustomFlter">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th >Name</th>
+                        <th >Gender</th>
+                        <th >city</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employee ">
+                        <td>{{employee.name }}</td>
+                        <td>{{employee.gender | gender }}</td>
+                        <td>{{employee.city}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>

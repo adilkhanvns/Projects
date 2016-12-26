@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "TwoWaybinding";
+}
+
+<h2>TwoWaybinding</h2>
+<html>
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/modeldirective.js"></script>
+        </head>
+    <body ng-app="mymodel">
+        <div ng-controller="mycontroller">
+            <input type="text" ng-model="message" />
+            <br /><br />
+            {{message}}
+            <input type="text" ng-model="greeting" />
+            <br /><br />
+            {{greeting}}@*behind the seen greeting model is created by angilar itself*@
+        </div>
+        <div ng-controller="ComplexOperation">
+            <table>
+                <tr>
+                    <td>first Name</td>
+                    <td>
+                        <input type="text" ng-model="employee.firstname" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>last Name</td>
+                    <td>
+                        <input type="text" ng-model="employee.lastname" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>gender</td>
+                    <td>
+                        <input type="text" ng-model="employee.gender" /> 
+                    </td>
+                </tr>
+            </table>
+            
+            <br />
+            <table>
+                <tr>
+                    <td>first Name</td>
+                    <td>
+                        {{employee.firstname}} 
+                    </td>
+                </tr>
+                <tr>
+                    <td>last Name</td>
+                    <td>
+                       {{employee.lastname}} 
+                    </td>
+                </tr>
+                <tr>
+                    <td>gender</td>
+                    <td>
+                        {{employee.gender}} 
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <br />
+            <div ng-controller="employees">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr ng-repeat="employee in employees"> 
+                        <td> {{employee.firstname}}</td>
+                        <td> {{employee.lastname}}</td>
+                        <td> {{employee.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+                </div>
+     </body>
+ </html>

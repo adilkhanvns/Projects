@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Eveandling";
+}
+
+<h2>Eveandling</h2>
+<html>
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/eventhandling.js"></script>
+        </head>
+    <body ng-app="mymodel">
+        <div ng-controller="eventhandling">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Like</th>
+                        <th>Dislike</th>
+                        <th>Like\Dislike </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="technology in technologies">
+                        <td>{{technology.name}}</td>
+                        <td>{{technology.like}}</td>
+                        <td>{{technology.dislike}}</td>
+                        <td><input type="button" value="like" ng-click="incrementlike(technology)"</td>
+                        <td><input type="button" value="dislike" ng-click="incrementdislike(technology)"</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+    </html>
