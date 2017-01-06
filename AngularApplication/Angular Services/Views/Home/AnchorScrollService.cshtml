@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "AnchorScrollService";
+}
+
+<h2>AnchorScrollService</h2>
+<html ng-app="Mymodule"> 
+<head>
+ <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/jquery-1.8.2.min.js">
+</script>
+    <script src="~/Scripts/Service.js"></script>
+    <script src="~/Scripts/anchorscrollService.js"></script>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+ </head>
+<body ng-controller="CountryController">
+    <span ng-repeat="country in countries">
+        <button ng-click="scrollTo(country.name)">{{country.name}}</button>
+    </span>
+    <br />
+    <div>
+        <fieldset ng-repeat="country in countries" id="{{country.name}}">
+            <legend>{{country.name}}</legend>
+            <ul>
+                <li ng-repeat="city in country.cities">
+                    {{city.name}}
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+           </body>

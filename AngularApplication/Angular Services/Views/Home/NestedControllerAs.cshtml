@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "NestedControllerAs";
+}
+
+<h2>NestedControllerAs</h2>
+<html ng-app="MyModule">
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/NestedControllerAsSyntax.js"></script>
+    </head>
+    <body>
+        @*<div ng-controller="CountryController">
+            {{name}}
+            <div ng-controller="StateController">
+                {{$parent.name}} -- {{name}}
+                <div ng-controller="CityController">
+                     {{$parent.$parent.name}} -- {{$parent.name}} --{{name}}
+
+                </div>
+            </div>
+        </div>*@
+
+         <div ng-controller="CountryController as CountryCtrl">
+            {{CountryCtrl.name}}
+            <div ng-controller="StateController as StateCtrl">
+                {{CountryCtrl.name}} -- {{StateCtrl.name}}
+                <div ng-controller="CityController as Cityctrl">
+                     {{CountryCtrl.name}} -- {{StateCtrl.name}} --{{Cityctrl.name}}
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

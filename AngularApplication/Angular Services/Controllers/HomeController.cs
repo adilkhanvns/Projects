@@ -16,5 +16,25 @@ namespace Angular_Services.Controllers
             return View();
         }
 
+        public ActionResult CustomService()
+        {
+            return View();
+        }
+
+
+        public ActionResult AnchorScrollService()
+        {
+            return View();
+        }
+
+        public ActionResult Routing()
+        {
+            return View();
+        }
+
+        public ActionResult NestedControllerAs()
+        {
+            return View();
+        }
     }
 }

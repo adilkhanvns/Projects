@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Routing";
+}
+
+<h2>Routing</h2>
+<html ng-app="route">
+    <head>
+        <base href="/" />
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/angular-route.js"></script>
+        <script src="~/Scripts/angular-animate.js"></script>
+        <script src="~/Scripts/Route.js"></script>
+        <script src="~/Scripts/studentDetailService.js"></script>
+
+        <link href="~/Content/StyleTable.css" rel="stylesheet" />
+    </head>
+    <body>
+        <table style="font-family:Arial">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>
+                        Web site
+                    </h1>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="leftMenu">
+                   <a  href="/tHome">Home</a>
+                    <a  href="/tCource">Course</a>
+                    <a  href="/tStudent">students</a>
+                    <a href="/tStudentDetail">Student Details</a>
+                </td >
+                <td class="mainContent">
+                   <ng-view>
+
+                   </ng-view>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <b>Web sute fotter</b>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

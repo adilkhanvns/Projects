@@ -29,3 +29,34 @@ E:\Projects\Angular Application\Angular Services\bin\System.Web.WebPages.Razor.x
 E:\Projects\Angular Application\Angular Services\obj\Debug\Angular Services.csprojResolveAssemblyReference.cache
 E:\Projects\Angular Application\Angular Services\obj\Debug\Angular Services.dll
 E:\Projects\Angular Application\Angular Services\obj\Debug\Angular Services.pdb
+E:\Projects\AngularApplication\Angular Services\bin\Angular Services.dll
+E:\Projects\AngularApplication\Angular Services\bin\Angular Services.pdb
+E:\Projects\AngularApplication\Angular Services\bin\Antlr3.Runtime.dll
+E:\Projects\AngularApplication\Angular Services\bin\EntityFramework.dll
+E:\Projects\AngularApplication\Angular Services\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\AngularApplication\Angular Services\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Projects\AngularApplication\Angular Services\bin\Newtonsoft.Json.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Net.Http.Formatting.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Http.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Http.WebHost.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Mvc.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Optimization.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Providers.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Razor.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.dll
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.Razor.dll
+E:\Projects\AngularApplication\Angular Services\bin\WebGrease.dll
+E:\Projects\AngularApplication\Angular Services\bin\EntityFramework.xml
+E:\Projects\AngularApplication\Angular Services\bin\Newtonsoft.Json.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Net.Http.Formatting.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Http.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Http.WebHost.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Mvc.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.Razor.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\AngularApplication\Angular Services\bin\System.Web.WebPages.Razor.xml
+E:\Projects\AngularApplication\Angular Services\obj\Debug\Angular Services.dll
+E:\Projects\AngularApplication\Angular Services\obj\Debug\Angular Services.pdb
+E:\Projects\AngularApplication\Angular Services\obj\Debug\Angular Services.csprojResolveAssemblyReference.cache

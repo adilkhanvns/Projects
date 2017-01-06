@@ -16,6 +16,23 @@ var myapp = angular.module("Mymodule", [])
 
     $scope.message = "Hello Angula!";
 
+})
+
+myapp.controller("CustomService", function ($scope, stringService) {
+    $scope.transformstring = function (input) {
+        $scope.output = stringService.processString(input);
+    }
+})
+
+myapp.controller("CountryController", function ($scope, anchorscrollService, $location, $anchorScroll) {
+    $scope.countries = anchorscrollService.anchorScrollService();
+    $scope.scrollTo = function (countryname) {
+        $location.hash(countryname);
+        $anchorScroll();
+
+    }
+
+
 
 
 })

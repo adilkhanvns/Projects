@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "CustomService";
+}
+
+<h2>CustomService</h2>
+<html> 
+<h2>Index</h2>
+<head>
+ <script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/jquery-1.8.2.min.js">
+</script>
+    <script src="~/Scripts/Service.js"></script>
+    <script src="~/Scripts/StringService.js"></script>
+ </head>
+<body  ng-app="Mymodule">
+    <div ng-controller="CustomService">
+        <table>
+            <tr>
+                <td>Your String </td>
+                <td><input type="text"  ng-model="input"/></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text"  ng-model="output"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" ng-click="transformstring(input)" value="Process string" />
+                </td>
+            </tr>
+        </table>
+        </div>
+       </body>
+ 
+
